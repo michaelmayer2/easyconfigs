@@ -13,7 +13,9 @@ yum install --quiet --assumeyes file git which
 yum install --quiet --assumeyes gcc-c++
 yum install --quiet --assumeyes perl-Data-Dumper
 yum install --quiet --assumeyes perl-Thread-Queue
+yum install --quiet --assumeyes rpm-build
 
+yum install --quiet --assumeyes libibverbs-devel rdma-core-devel
 # Install FPM 
 yum install --quiet --assumeyes centos-release-scl-rh centos-release-scl
 yum --enablerepo=centos-sclo-rh  install --quiet --assumeyes rh-ruby26 rh-ruby26-ruby-devel
@@ -24,7 +26,8 @@ gem install fpm
 
 pip install easybuild==4.6.2 
 
-mkdir -p /etc/easybuild.d
+mkdir -p /etc/easybuild.d /scratch 
+
 cat << EOF > /etc/easybuild.d/config.cfg
 [basic]
 logtostdout = true
@@ -47,9 +50,16 @@ eval "$@"
 %environment
 # make sure that 'module' and 'ml' commands are defined
 source /etc/profile
+export PKG_CONFIG_PATH=/opt/rh/rh-ruby26/root/usr/local/lib64/pkgconfig:/opt/rh/rh-ruby26/root/usr/lib64/pkgconfig
+export LD_LIBRARY_PATH=/opt/rh/rh-ruby26/root/usr/local/lib64:/opt/rh/rh-ruby26/root/usr/lib64
+export PATH=/opt/rh/rh-ruby26/root/usr/local/bin:/opt/rh/rh-ruby26/root/usr/bin:$PATH
+
+export PYTHONHTTPSVERIFY=0 
 # increase threshold time for Lmod to write cache in $HOME (which we don't want to do)
 export LMOD_SHORT_TIME=86400
 # purge any modules that may be loaded outside container
 module --force purge
 # avoid picking up modules from outside of container
-module unuse $MODULEPATH 
+module unuse $MODULEPATH
+
+ 
