@@ -1,0 +1,57 @@
+Bootstrap: docker 
+From: ubuntu:jammy
+
+%post 
+
+export DEBIAN_FRONTEND=noninteractive
+apt-get update 
+apt-get install -y python-setuptools python-pip lmod
+apt-get install -y bzip2 gzip tar zip unzip xz-utils
+apt-get install -y curl wget
+apt-get install -y patch make
+apt-get install -y file git 
+apt-get install -y gcc-9
+apt-get install -y librdmacm-dev libibverbs-dev
+apt-get install -y ruby-rubygems
+#apt-get install -y build-essentials
+gem install fpm -v '1.13.1'
+
+pip2 install easybuild==4.6.2 
+
+mkdir -p /etc/easybuild.d /scratch 
+
+cat << EOF > /etc/easybuild.d/config.cfg
+[basic]
+logtostdout = true
+[config]
+modules-tool: Lmod
+buildpath       = /scratch
+containerpath   = /opt/apps/easybuild/containers
+#filter-env-vars = LD_LIBRARY_PATH
+installpath     = /opt/apps/easybuild
+packagepath     = /opt/apps/easybuild/packages
+prefix          = /opt/apps/easybuild
+repositorypath  = /opt/apps/easybuild/ebfiles_repo
+robot-paths     = /usr/easybuild/easyconfigs
+#rpath           = True
+sourcepath      = /opt/apps/easybuild/sources
+experimental    = True
+parallel-extensions-install= True
+optarch = GENERIC
+EOF
+%runscript
+eval "$@"
+
+%environment
+# make sure that 'module' and 'ml' commands are defined
+source /etc/profile
+
+export PYTHONHTTPSVERIFY=0 
+# increase threshold time for Lmod to write cache in $HOME (which we don't want to do)
+export LMOD_SHORT_TIME=86400
+# purge any modules that may be loaded outside container
+module --force purge
+# avoid picking up modules from outside of container
+module unuse $MODULEPATH
+
+ 

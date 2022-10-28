@@ -1,11 +1,11 @@
 Bootstrap: docker 
-From: centos:7
+From: rockylinux:8
 
 %post 
 
 yum install --quiet --assumeyes epel-release
-yum install --quiet --assumeyes python setuptools Lmod
-yum install --quiet --assumeyes python-pip
+yum install --quiet --assumeyes python3-setuptools python3-pip
+yum install --quiet --assumeyes --enablerepo=powertools Lmod
 yum install --quiet --assumeyes bzip2 gzip tar zip unzip xz
 yum install --quiet --assumeyes curl wget
 yum install --quiet --assumeyes patch make
@@ -17,14 +17,11 @@ yum install --quiet --assumeyes rpm-build
 
 yum install --quiet --assumeyes libibverbs-devel rdma-core-devel
 # Install FPM 
-yum install --quiet --assumeyes centos-release-scl-rh centos-release-scl
-yum --enablerepo=centos-sclo-rh  install --quiet --assumeyes rh-ruby26 rh-ruby26-ruby-devel
-export PKG_CONFIG_PATH=/opt/rh/rh-ruby26/root/usr/local/lib64/pkgconfig:/opt/rh/rh-ruby26/root/usr/lib64/pkgconfig
-export LD_LIBRARY_PATH=/opt/rh/rh-ruby26/root/usr/local/lib64:/opt/rh/rh-ruby26/root/usr/lib64
-export PATH=/opt/rh/rh-ruby26/root/usr/local/bin:/opt/rh/rh-ruby26/root/usr/bin:$PATH
+yum  module -y enable ruby:2.6
+yum install --quiet --assumeyes ruby-devel rubygems
 gem install fpm
 
-pip install easybuild==4.6.2 
+pip3 install easybuild==4.6.2 
 
 mkdir -p /etc/easybuild.d /scratch 
 
