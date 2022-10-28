@@ -12,6 +12,7 @@ apt-get install -y patch make
 apt-get install -y file git 
 apt-get install -y gcc-9
 apt-get install -y librdmacm-dev libibverbs-dev
+apt-get install -y openssl
 apt-get install -y ruby-rubygems
 #apt-get install -y build-essentials
 gem install fpm -v '1.13.1'
