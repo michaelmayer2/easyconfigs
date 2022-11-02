@@ -27,8 +27,8 @@ gem install fpm -v '1.13.1'
 
 pip2 install easybuild==4.6.2 
 
-mkdir -p /etc/easybuild.d /scratch 
-
+mkdir -p /scratch 
+echo "package-type=deb" | tee -a /etc/easybuild.d/config.cfg
 %runscript
 eval "$@"
 
