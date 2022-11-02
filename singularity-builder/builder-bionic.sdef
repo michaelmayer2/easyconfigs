@@ -1,6 +1,10 @@
 Bootstrap: docker 
 From: ubuntu:bionic
 
+%files
+
+config.cfg /etc/easybuild.d/
+
 %post 
 
 export DEBIAN_FRONTEND=noninteractive
@@ -25,25 +29,6 @@ pip2 install easybuild==4.6.2
 
 mkdir -p /etc/easybuild.d /scratch 
 
-cat << EOF > /etc/easybuild.d/config.cfg
-[basic]
-logtostdout = true
-[config]
-modules-tool: Lmod
-buildpath       = /scratch
-containerpath   = /opt/apps/easybuild/containers
-#filter-env-vars = LD_LIBRARY_PATH
-installpath     = /opt/apps/easybuild
-packagepath     = /opt/apps/easybuild/packages
-prefix          = /opt/apps/easybuild
-repositorypath  = /opt/apps/easybuild/ebfiles_repo
-robot-paths     = /usr/easybuild/easyconfigs
-#rpath           = True
-sourcepath      = /opt/apps/easybuild/sources
-experimental    = True
-parallel-extensions-install= True
-optarch = GENERIC
-EOF
 %runscript
 eval "$@"
 
