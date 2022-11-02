@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-10-31_10-42-00
 # Built with EasyBuild version 4.6.2 on 2022-10-26_07-06-53
 name = 'Doxygen'
 version = '1.9.4'
@@ -30,4 +31,5 @@ dependencies = [
 configopts = "-DICONV_DIR=$EBROOTLIBICONV -DICONV_IN_GLIBC=OFF"
 
 moduleclass = 'devel'
+
 

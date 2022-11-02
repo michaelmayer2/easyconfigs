@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-11-01_20-37-02
 ##
 # Author:    Robert Mijakovic <robert.mijakovic@lxp.lu>
 ##
@@ -52,6 +53,7 @@ dependencies = [
     ('GDAL', '3.5.0'),  # for sf
     ('MPFR', '4.1.0'),  # for Rmpfr
     ('libgit2', '1.4.3'),
+    ('texlive', '20220321'),
     ('OpenSSL', '1.1', '', SYSTEM),
 ]
 
@@ -2970,3 +2972,4 @@ exts_list = [
 ]
 
 moduleclass = 'lang'
+

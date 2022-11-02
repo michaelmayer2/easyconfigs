@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-10-31_08-43-15
 # Built with EasyBuild version 4.6.2 on 2022-10-25_18-39-10
 easyblock = 'Bundle'
 
@@ -21,4 +22,5 @@ altversion = 'GCCcore'
 
 # this bundle serves as a compiler-only toolchain, so it should be marked as compiler (important for HMNS)
 moduleclass = 'compiler'
+
 

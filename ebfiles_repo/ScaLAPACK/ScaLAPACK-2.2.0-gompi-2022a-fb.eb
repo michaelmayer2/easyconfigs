@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-10-31_13-24-50
 # Built with EasyBuild version 4.6.2 on 2022-10-26_10-02-43
 name = 'ScaLAPACK'
 version = '2.2.0'
@@ -42,4 +43,5 @@ sanity_check_paths = {
 }
 
 moduleclass = 'numlib'
+
 

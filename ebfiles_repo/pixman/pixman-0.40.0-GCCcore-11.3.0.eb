@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-10-28_12-25-58
 # Built with EasyBuild version 4.6.2 on 2022-10-25_18-56-41
 easyblock = 'ConfigureMake'
 
@@ -27,4 +28,5 @@ sanity_check_paths = {
 }
 
 moduleclass = 'vis'
+
 

@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-10-28_12-15-41
 # Built with EasyBuild version 4.6.2 on 2022-10-25_18-22-44
 easyblock = 'EB_GCC'
 
@@ -71,4 +72,5 @@ if withnvptx:
     osdependencies = ['perl']
 
 moduleclass = 'compiler'
+
 

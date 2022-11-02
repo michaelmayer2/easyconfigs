@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-10-31_10-40-15
 # Built with EasyBuild version 4.6.2 on 2022-10-26_17-57-15
 easyblock = 'MesonNinja'
 
@@ -40,4 +41,5 @@ sanity_check_paths = {
 }
 
 moduleclass = 'vis'
+
 

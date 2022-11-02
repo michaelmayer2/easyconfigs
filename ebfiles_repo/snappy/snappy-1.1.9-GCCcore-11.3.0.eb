@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-10-31_13-06-00
 # Built with EasyBuild version 4.6.2 on 2022-10-25_21-50-42
 easyblock = 'CMakeMake'
 
@@ -38,4 +39,5 @@ sanity_check_paths = {
 }
 
 moduleclass = 'lib'
+
 

@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-10-28_17-56-46
 # Built with EasyBuild version 4.6.2 on 2022-10-26_03-29-38
 easyblock = 'ConfigureMake'
 
@@ -57,4 +58,5 @@ sanity_check_commands = [
 ]
 
 moduleclass = 'lang'
+
 

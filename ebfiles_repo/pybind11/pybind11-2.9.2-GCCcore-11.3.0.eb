@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-10-31_13-31-26
 # Built with EasyBuild version 4.6.2 on 2022-10-26_05-35-49
 name = 'pybind11'
 version = '2.9.2'
@@ -22,4 +23,5 @@ dependencies = [('Python', '3.10.4')]
 configopts = "-DPYTHON_EXECUTABLE=$EBROOTPYTHON/bin/python"
 
 moduleclass = 'lib'
+
 

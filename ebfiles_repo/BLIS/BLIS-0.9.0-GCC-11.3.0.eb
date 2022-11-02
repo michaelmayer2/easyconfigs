@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-10-31_11-58-50
 # Built with EasyBuild version 4.6.2 on 2022-10-25_22-45-40
 easyblock = 'ConfigureMake'
 
@@ -28,6 +29,8 @@ builddependencies = [
     ('Perl', '5.34.1'),
 ]
 
+#https://github.com/easybuilders/easybuild/issues/814
+preconfigopts = 'export CFLAGS="-O2 -ftree-vectorize -march=haswell -mtune=generic -fno-math-errno" && '
 configopts = '--enable-cblas --enable-threading=openmp --enable-shared CC="$CC" auto'
 
 runtest = 'check'
@@ -41,4 +44,5 @@ sanity_check_paths = {
 modextrapaths = {'CPATH': 'include/blis'}
 
 moduleclass = 'numlib'
+
 

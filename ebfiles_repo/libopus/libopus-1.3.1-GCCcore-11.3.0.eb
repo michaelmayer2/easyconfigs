@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-10-31_09-33-18
 # Built with EasyBuild version 4.6.2 on 2022-10-26_06-52-33
 easyblock = 'ConfigureMake'
 
@@ -31,4 +32,5 @@ sanity_check_paths = {
 }
 
 moduleclass = 'lib'
+
 

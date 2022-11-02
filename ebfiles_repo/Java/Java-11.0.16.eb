@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-11-01_18-31-52
 # Built with EasyBuild version 4.6.2 on 2022-10-25_14-52-58
 name = 'Java'
 version = '11.0.16'
@@ -29,4 +30,5 @@ checksums = [
 ]
 
 moduleclass = 'lang'
+
 

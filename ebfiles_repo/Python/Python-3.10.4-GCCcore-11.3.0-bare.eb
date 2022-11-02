@@ -1,3 +1,4 @@
+# Built with EasyBuild version 4.6.2 on 2022-10-28_15-43-04
 # Built with EasyBuild version 4.6.2 on 2022-10-25_22-40-35
 name = 'Python'
 version = '3.10.4'
@@ -34,4 +35,5 @@ dependencies = [
 install_pip = True
 
 moduleclass = 'lang'
+
 
