@@ -9,20 +9,19 @@ config.cfg /etc/easybuild.d/
 
 export DEBIAN_FRONTEND=noninteractive
 apt-get update 
-apt-get install -y python-setuptools python-pip lmod
-apt-get install -y bzip2 gzip tar zip unzip xz-utils
-apt-get install -y curl wget
-apt-get install -y patch make
-apt-get install -y file git 
-apt-get install -y gcc-7
-apt-get install -y librdmacm-dev libibverbs-dev
-apt-get install -y libssl-dev openssl
-apt-get install -y software-properties-common
+apt-get install -y python-setuptools python-pip lmod \
+	bzip2 gzip tar zip unzip xz-utils \
+	curl wget \
+	patch make file git gcc-7 \
+	librdmacm-dev libibverbs-dev \
+	libssl-dev openssl \
+	software-properties-common
 add-apt-repository -y ppa:brightbox/ruby-ng-experimental 
 apt-get install -y ruby2.6
 
 ln -s /usr/lib/x86_64-linux-gnu/lua/5.2/posix_c.so /usr/lib/x86_64-linux-gnu/lua/5.2/posix.so 
 
+gem install activesupport -v 6.1.7.2
 gem install fpm -v '1.13.1'
 
 pip2 install easybuild==4.6.2 
