@@ -210,10 +210,10 @@ exts_list = [
         'source_urls': ['https://cpan.metacpan.org/authors/id/S/SH/SHAY'],
         'checksums': ['27ba13f0d9512929166bbd8c9ef95d90d630fc80f0c9a1b7458891055e9282a4'],
     }),
-    ('CPAN::Meta::Check', '0.014', {
+    ('CPAN::Meta::Check', '0.016', {
         'source_tmpl': 'CPAN-Meta-Check-%(version)s.tar.gz',
         'source_urls': ['https://www.cpan.org/authors/id/L/LE/LEONT/'],
-        'checksums': ['28a0572bfc1c0678d9ce7da48cf521097ada230f96eb3d063fcbae1cfe6a351f'],
+	'checksums': ['0cdd70ef8c1ad5cd7468b9774a0d9aea15919a39523af5138167aa09f8638ca9'],
     }),
     ('Test::Without::Module', '0.20', {
         'source_tmpl': 'Test-Without-Module-%(version)s.tar.gz',
@@ -1376,10 +1376,10 @@ exts_list = [
         'source_urls': ['https://cpan.metacpan.org/authors/id/E/ET/ETHER'],
         'checksums': ['9cd87b3492cbf0be9d2df9317b2adf9fc30663770e69906654bea3f41b17cb08'],
     }),
-    ('Variable::Magic', '0.62', {
+    ('Variable::Magic', '0.63', {
         'source_tmpl': 'Variable-Magic-%(version)s.tar.gz',
         'source_urls': ['https://www.cpan.org/authors/id/V/VP/VPIT/'],
-        'checksums': ['3f9a18517e33f006a9c2fc4f43f01b54abfe6ff2eae7322424f31069296b615c'],
+        'checksums': ['ba4083b2c31ff2694f2371333d554c826aaf24b4d98d03e48b5b4a43a2a0e679'],
     }),
     ('B::Hooks::EndOfScope', '0.26', {
         'source_tmpl': 'B-Hooks-EndOfScope-%(version)s.tar.gz',

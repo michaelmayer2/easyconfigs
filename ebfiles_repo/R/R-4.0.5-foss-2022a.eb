@@ -55,6 +55,7 @@ dependencies = [
     ('libgit2', '1.4.3'),
     ('texlive', '20220321'),
     ('OpenSSL', '1.1', '', SYSTEM),
+    ('OpenBLAS', '0.3.20'),
 ]
 
 osdependencies = [OS_PKG_OPENSSL_DEV]
