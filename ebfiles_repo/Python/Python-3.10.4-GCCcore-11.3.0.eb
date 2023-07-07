@@ -1,5 +1,3 @@
-# Built with EasyBuild version 4.6.2 on 2022-10-28_18-54-47
-# Built with EasyBuild version 4.6.2 on 2022-10-26_05-12-42
 name = 'Python'
 version = '3.10.4'
 
@@ -480,5 +478,6 @@ exts_list = [
 ]
 
 moduleclass = 'lang'
+
 
 

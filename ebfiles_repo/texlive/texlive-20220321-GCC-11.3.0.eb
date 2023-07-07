@@ -1,4 +1,3 @@
-# Built with EasyBuild version 4.6.2 on 2022-11-01_15-00-18
 # Based off the 2017 version by John Dey jfdey@fredhutch.org
 # https://github.com/easybuilders/easybuild-easyconfigs/pull/5085
 easyblock = 'Tarball'
@@ -64,4 +63,5 @@ sanity_check_paths = {
 }
 
 moduleclass = 'devel'
+
 

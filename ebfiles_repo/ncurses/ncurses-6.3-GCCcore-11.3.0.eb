@@ -1,5 +1,3 @@
-# Built with EasyBuild version 4.6.2 on 2022-10-28_12-29-21
-# Built with EasyBuild version 4.6.2 on 2022-10-25_19-03-36
 easyblock = 'ConfigureMake'
 
 name = 'ncurses'
@@ -47,5 +45,6 @@ sanity_check_paths = {
 }
 
 moduleclass = 'devel'
+
 
 

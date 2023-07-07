@@ -1,5 +1,3 @@
-# Built with EasyBuild version 4.6.2 on 2022-10-31_09-57-10
-# Built with EasyBuild version 4.6.2 on 2022-10-25_22-13-45
 easyblock = 'ConfigureMake'
 
 name = 'hwloc'
@@ -45,5 +43,6 @@ sanity_check_paths = {
 sanity_check_commands = ['lstopo']
 
 moduleclass = 'system'
+
 
 

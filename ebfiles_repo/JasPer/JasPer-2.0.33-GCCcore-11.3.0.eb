@@ -1,5 +1,3 @@
-# Built with EasyBuild version 4.6.2 on 2022-10-31_09-55-20
-# Built with EasyBuild version 4.6.2 on 2022-10-26_06-52-56
 easyblock = 'CMakeMake'
 
 name = 'JasPer'
@@ -36,5 +34,6 @@ sanity_check_paths = {
 sanity_check_commands = ['jasper --version']
 
 moduleclass = 'vis'
+
 
 

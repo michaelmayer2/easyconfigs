@@ -1,5 +1,3 @@
-# Built with EasyBuild version 4.6.2 on 2022-10-28_17-57-12
-# Built with EasyBuild version 4.6.2 on 2022-10-25_21-38-11
 easyblock = 'Bundle'
 
 name = 'Autotools'
@@ -24,5 +22,6 @@ dependencies = [
 # toolchain as build dependency
 
 moduleclass = 'devel'
+
 
 

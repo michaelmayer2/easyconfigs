@@ -1,5 +1,3 @@
-# Built with EasyBuild version 4.6.2 on 2022-10-31_09-36-21
-# Built with EasyBuild version 4.6.2 on 2022-10-26_06-52-25
 easyblock = 'ConfigureMake'
 
 name = 'LAME'
@@ -36,5 +34,6 @@ sanity_check_paths = {
 }
 
 moduleclass = 'data'
+
 
 

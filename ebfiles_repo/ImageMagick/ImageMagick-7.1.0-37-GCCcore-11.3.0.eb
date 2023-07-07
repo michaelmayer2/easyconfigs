@@ -1,5 +1,3 @@
-# Built with EasyBuild version 4.6.2 on 2022-10-31_11-15-30
-# Built with EasyBuild version 4.6.2 on 2022-10-26_18-56-08
 easyblock = 'ConfigureMake'
 
 name = 'ImageMagick'
@@ -41,5 +39,6 @@ sanity_check_paths = {
 modextravars = {'MAGICK_HOME': '%(installdir)s'}
 
 moduleclass = 'vis'
+
 
 

@@ -1,5 +1,3 @@
-# Built with EasyBuild version 4.6.2 on 2022-10-31_10-42-02
-# Built with EasyBuild version 4.6.2 on 2022-10-26_08-55-17
 easyblock = 'Toolchain'
 
 name = 'gompi'
@@ -20,5 +18,6 @@ dependencies = [
 ]
 
 moduleclass = 'toolchain'
+
 
 

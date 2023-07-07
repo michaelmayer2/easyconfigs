@@ -1,4 +1,3 @@
-# Built with EasyBuild version 4.6.2 on 2022-10-26_06-47-27
 ##
 # Author:    Robert Mijakovic <robert.mijakovic@lxp.lu>
 ##
@@ -32,4 +31,5 @@ sanity_check_paths = {
 }
 
 moduleclass = 'lib'
+
 

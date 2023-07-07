@@ -1,5 +1,3 @@
-# Built with EasyBuild version 4.6.2 on 2022-10-28_19-02-44
-# Built with EasyBuild version 4.6.2 on 2022-10-25_22-16-33
 name = 'freetype'
 version = '2.12.1'
 
@@ -43,5 +41,6 @@ sanity_check_paths = {
 sanity_check_commands = ["freetype-config --help"]
 
 moduleclass = 'vis'
+
 
 
